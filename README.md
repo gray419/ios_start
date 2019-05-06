@@ -1,5 +1,5 @@
 # iOS Starter
 
-Barebones project for iOS projects.
+Barebones setup for iOS projects.
 
 - `brew install carthage`
