@@ -13,7 +13,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         let label = UILabel()
         label.text = "iOS Starter"
         view.addSubview(label)
@@ -22,4 +22,3 @@ class ViewController: UIViewController {
         }
     }
 }
-
