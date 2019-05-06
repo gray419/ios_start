@@ -13,6 +13,8 @@
 		6701D7AD227FDD50003F7FC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6701D7AC227FDD50003F7FC4 /* Assets.xcassets */; };
 		6701D7B0227FDD50003F7FC4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6701D7AE227FDD50003F7FC4 /* LaunchScreen.storyboard */; };
 		6701D7BB227FDD50003F7FC4 /* ios_starterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6701D7BA227FDD50003F7FC4 /* ios_starterTests.swift */; };
+		6701D7CB227FE0BE003F7FC4 /* Snail.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6701D7C9227FE0BE003F7FC4 /* Snail.framework */; };
+		6701D7CC227FE0BE003F7FC4 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6701D7CA227FE0BE003F7FC4 /* SnapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		6701D7B6227FDD50003F7FC4 /* ios_starterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ios_starterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6701D7BA227FDD50003F7FC4 /* ios_starterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_starterTests.swift; sourceTree = "<group>"; };
 		6701D7BC227FDD50003F7FC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6701D7C9227FE0BE003F7FC4 /* Snail.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Snail.framework; path = Carthage/Build/iOS/Snail.framework; sourceTree = "<group>"; };
+		6701D7CA227FE0BE003F7FC4 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +47,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6701D7CB227FE0BE003F7FC4 /* Snail.framework in Frameworks */,
+				6701D7CC227FE0BE003F7FC4 /* SnapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +68,7 @@
 				6701D7A4227FDD4F003F7FC4 /* ios_starter */,
 				6701D7B9227FDD50003F7FC4 /* ios_starterTests */,
 				6701D7A3227FDD4F003F7FC4 /* Products */,
+				6701D7C8227FE0BE003F7FC4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,10 +86,7 @@
 			children = (
 				6701D7A5227FDD4F003F7FC4 /* AppDelegate.swift */,
 				6701D7A7227FDD4F003F7FC4 /* ViewController.swift */,
-				6701D7A9227FDD4F003F7FC4 /* Main.storyboard */,
-				6701D7AC227FDD50003F7FC4 /* Assets.xcassets */,
-				6701D7AE227FDD50003F7FC4 /* LaunchScreen.storyboard */,
-				6701D7B1227FDD50003F7FC4 /* Info.plist */,
+				6701D7C5227FDE8C003F7FC4 /* Resources */,
 			);
 			path = ios_starter;
 			sourceTree = "<group>";
@@ -96,6 +100,26 @@
 			path = ios_starterTests;
 			sourceTree = "<group>";
 		};
+		6701D7C5227FDE8C003F7FC4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6701D7AE227FDD50003F7FC4 /* LaunchScreen.storyboard */,
+				6701D7B1227FDD50003F7FC4 /* Info.plist */,
+				6701D7AC227FDD50003F7FC4 /* Assets.xcassets */,
+				6701D7A9227FDD4F003F7FC4 /* Main.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		6701D7C8227FE0BE003F7FC4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6701D7C9227FE0BE003F7FC4 /* Snail.framework */,
+				6701D7CA227FE0BE003F7FC4 /* SnapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,6 +130,7 @@
 				6701D79E227FDD4F003F7FC4 /* Sources */,
 				6701D79F227FDD4F003F7FC4 /* Frameworks */,
 				6701D7A0227FDD4F003F7FC4 /* Resources */,
+				6701D7CD227FE0D3003F7FC4 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -191,6 +216,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6701D7CD227FE0D3003F7FC4 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Snail.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6701D79E227FDD4F003F7FC4 /* Sources */ = {
@@ -361,7 +408,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = ios_starter/Info.plist;
+				DEVELOPMENT_TEAM = AKK68GE86T;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = ios_starter/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -378,7 +430,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = ios_starter/Info.plist;
+				DEVELOPMENT_TEAM = AKK68GE86T;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = ios_starter/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
