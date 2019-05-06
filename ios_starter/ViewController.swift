@@ -22,7 +22,7 @@ class ViewController: UIViewController {
         label.snp.makeConstraints { make in
             make.center.equalTo(view)
         }
-        
+
         let client = URLSession.shared
         guard let url = URL(string: "https://gist.githubusercontent.com/gray419/a0d58d14a6105c7f423d52210f723f4c/raw/c0ffb5c4ae3d8f417f3fd249f078e2f51ce02d35/movies.json") else {
             return
