@@ -15,6 +15,8 @@
 		6701D7BB227FDD50003F7FC4 /* ios_starterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6701D7BA227FDD50003F7FC4 /* ios_starterTests.swift */; };
 		6701D7CB227FE0BE003F7FC4 /* Snail.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6701D7C9227FE0BE003F7FC4 /* Snail.framework */; };
 		6701D7CC227FE0BE003F7FC4 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6701D7CA227FE0BE003F7FC4 /* SnapKit.framework */; };
+		670D241A227FE3CA00BDB1F4 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670D2419227FE3CA00BDB1F4 /* Movie.swift */; };
+		670D241D227FE3F600BDB1F4 /* MovieResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670D241C227FE3F600BDB1F4 /* MovieResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		6701D7BC227FDD50003F7FC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6701D7C9227FE0BE003F7FC4 /* Snail.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Snail.framework; path = Carthage/Build/iOS/Snail.framework; sourceTree = "<group>"; };
 		6701D7CA227FE0BE003F7FC4 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
+		670D2419227FE3CA00BDB1F4 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		670D241C227FE3F600BDB1F4 /* MovieResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +89,8 @@
 			isa = PBXGroup;
 			children = (
 				6701D7A5227FDD4F003F7FC4 /* AppDelegate.swift */,
+				670D2419227FE3CA00BDB1F4 /* Movie.swift */,
+				670D241C227FE3F600BDB1F4 /* MovieResponse.swift */,
 				6701D7A7227FDD4F003F7FC4 /* ViewController.swift */,
 				6701D7C5227FDE8C003F7FC4 /* Resources */,
 			);
@@ -245,7 +251,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6701D7A8227FDD4F003F7FC4 /* ViewController.swift in Sources */,
+				670D241D227FE3F600BDB1F4 /* MovieResponse.swift in Sources */,
 				6701D7A6227FDD4F003F7FC4 /* AppDelegate.swift in Sources */,
+				670D241A227FE3CA00BDB1F4 /* Movie.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
