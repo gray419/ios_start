@@ -27,12 +27,12 @@ class ViewController: UIViewController {
         guard let url = URL(string: "https://gist.githubusercontent.com/gray419/a0d58d14a6105c7f423d52210f723f4c/raw/c0ffb5c4ae3d8f417f3fd249f078e2f51ce02d35/movies.json") else {
             return
         }
-        client.data(request: URLRequest(url: url)).subscribe(onNext: { data, _ in
-            guard let movieResponse = try? JSONDecoder().decode(MovieResponse.self, from: data) else {
-                return
-            }
-            movieResponse.movies?.forEach {
-                print("\($0.name ?? "No Title") - \($0.rating ?? 0.0)")
+        let request = URLRequest(url: url)
+        client.dictionary(request: request).subscribe()
+        let result: Observable<(MovieResponse, URLResponse)> = client.decoded(request: request)
+        result.subscribe(onNext: { response, _ in
+            response.movies?.forEach {
+                print("\($0.name ?? "No Name") - \($0.rating ?? 0.0)")
             }
         })
     }
